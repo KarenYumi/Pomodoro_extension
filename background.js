@@ -34,6 +34,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'toggle') {
     chrome.storage.local.get(['isRunning', 'timeLeft'], (data) => toggleTimer(data))
   }
+  if (message.action === 'reset') {
+    chrome.alarms.clear(ALARM_NAME);
+    chrome.storage.local.set(getDefaultState());
+  };
 });
 
 function toggleTimer(data) {

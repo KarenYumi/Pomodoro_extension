@@ -73,3 +73,9 @@ chrome.storage.onChanged.addListener((_changes, area) => {
 document.querySelector('.button-play').addEventListener('click', () => {
   chrome.runtime.sendMessage({ action: 'toggle' });
 });
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+  chrome.storage.local.clear(() => {
+    chrome.runtime.sendMessage({ action: 'reset' });
+  });
+});
