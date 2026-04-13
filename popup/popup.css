@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  width: 220px;
+  height: 240px;
+  margin: 0;
+  overflow: hidden;
+  background-color: #FFF1E5;
+}
+
+/* #f33131 - avermelhado */
+/* #FFCC59 - laranja */
+
+.timer-container {
+  display: grid;
+  place-items: center;
+  padding-top: 0.1rem;
+}
+
+.timer-container>* {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.circle-container {
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg)
+}
+
+#circle-bg {
+  fill: none;
+  stroke: #f1f1f1;
+  stroke-width: 7px;
+}
+
+#circle-progress {
+  fill: none;
+  display: none;
+  stroke: #FFCC59;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-dasharray: 408;
+}
+
+#timer {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+#mode {
+  color: #f33131;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+
+#icon-play,
+#icon-pause {
+  display: block;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.button-play {
+  border: none;
+  border-radius: 50%;
+  background-color: #f33131;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
