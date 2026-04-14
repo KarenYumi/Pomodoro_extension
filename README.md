@@ -8,7 +8,8 @@ A browser extension that adapts the Pomodoro technique to match the brain's natu
 
 ## 📸 Screenshots
 
-> _Screenshots coming soon_
+<img width="217" height="247" alt="image" src="https://github.com/user-attachments/assets/a046bc30-f8f0-4da7-8482-ed8575df8f7a" />
+
 
 ---
 
