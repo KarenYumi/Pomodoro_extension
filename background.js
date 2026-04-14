@@ -1,6 +1,6 @@
 const SESSIONS = [
-  { mode: 'focus', duration: 1 * 60 },
-  { mode: 'break', duration: 2 * 60 },
+  { mode: 'focus', duration: 45 * 60 },
+  { mode: 'break', duration: 5 * 60 },
   { mode: 'focus', duration: 45 * 60 },
   { mode: 'break', duration: 5 * 60 },
   { mode: 'focus', duration: 45 * 60 },
