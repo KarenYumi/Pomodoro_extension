@@ -7,7 +7,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   width: 220px;
-  height: 240px;
+  height: 270px;
   margin: 0;
   overflow: hidden;
   background-color: #FFF1E5;
@@ -35,7 +35,7 @@ body {
 
 #circle-bg {
   fill: none;
-  stroke: #f1f1f1;
+  stroke: #e4e4e4;
   stroke-width: 7px;
 }
 
@@ -51,10 +51,11 @@ body {
 #timer {
   font-size: 30px;
   margin-bottom: 0;
+  color: #574c44;
 }
 
 #mode {
-  color: #f33131;
+  color: #f35e31;
   font-size: 16px;
   display: block;
   text-align: center;
@@ -70,7 +71,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-inline: 1rem;
 }
 
@@ -84,17 +85,17 @@ body {
 }
 
 #btn-reset:hover path {
-  stroke: #d82b2b;
+  stroke: #e02b2b;
 }
 
 #btn-reset:hover polygon {
-  fill: #d82b2b;
+  fill: #e02b2b;
 }
 
 .button-play {
   border: none;
   border-radius: 50%;
-  background-color: #f33131;
+  background-color: #f35e31;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -106,5 +107,21 @@ body {
 }
 
 .button-play:hover {
-  background-color: #e62e2e;
+  background-color: #e64b4b;
+}
+
+.cycle {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.label-cycle {
+  font-size: 10px;
+  color: #977c3b;
+  margin-bottom: 0;
+}
+
+#cycle {
+  color: #FFCC59;
 }

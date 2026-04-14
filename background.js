@@ -19,6 +19,7 @@ function getDefaultState() {
     isRunning: false,
     startTime: null,
     timeLeftAtStart: first.duration,
+    cyclesDone: 0,
   };
 }
 
@@ -115,6 +116,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         isRunning: false,
         startTime: null,
         timeLeftAtStart: nextSession.duration,
+        cyclesDone: nextIndex === 0 ? data.cyclesDone + 1 : data.cyclesDone,
       });
       playSound();
       openPopupWindow();

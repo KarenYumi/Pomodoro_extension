@@ -21,6 +21,12 @@ function updateDisplayMode(data) {
   }
 }
 
+function updateDisplayCycle(data) {
+  const cycleCounter = data.cyclesDone;
+  const cycle = document.getElementById('cycle');
+  cycle.textContent = cycleCounter;
+}
+
 function updateDisplayButton(data) {
   const play = document.getElementById('icon-play');
   const pause = document.getElementById('icon-pause');
@@ -61,13 +67,14 @@ function updateDisplay(data) {
   updateDisplayMode(data);
   updateDisplayButton(data);
   updateDisplayCircle(data);
+  updateDisplayCycle(data);
 }
 
-chrome.storage.local.get(['timeLeft', 'totalTime', 'isRunning', 'mode'], updateDisplay);
+chrome.storage.local.get(['timeLeft', 'totalTime', 'isRunning', 'mode', 'cyclesDone'], updateDisplay);
 
 chrome.storage.onChanged.addListener((_changes, area) => {
   if (area !== 'local') return;
-  chrome.storage.local.get(['timeLeft', 'totalTime', 'isRunning', 'mode'], updateDisplay);
+  chrome.storage.local.get(['timeLeft', 'totalTime', 'isRunning', 'mode', 'cyclesDone'], updateDisplay);
 });
 
 document.querySelector('.button-play').addEventListener('click', () => {
