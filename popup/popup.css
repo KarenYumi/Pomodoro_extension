@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  width: 220px;
+  height: 270px;
+  margin: 0;
+  overflow: hidden;
+  background-color: #FFF1E5;
+}
+
+/* #f33131 - avermelhado */
+/* #FFCC59 - laranja */
+
+.timer-container {
+  display: grid;
+  place-items: center;
+  padding-top: 0.1rem;
+}
+
+.timer-container>* {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.circle-container {
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg)
+}
+
+#circle-bg {
+  fill: none;
+  stroke: #e4e4e4;
+  stroke-width: 7px;
+  filter: drop-shadow(-2px 0px 3px #ffcd5971);
+}
+
+#inner-circle {
+  fill: none;
+  stroke: #f7f5ea;
+  stroke-width: 5px;
+}
+
+#circle-progress {
+  fill: none;
+  display: none;
+  stroke: #FFCC59;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-dasharray: 408;
+}
+
+#timer {
+  font-size: 30px;
+  margin: 0;
+  color: #574c44;
+}
+
+#mode {
+  color: #f35e31;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+
+#icon-play,
+#icon-pause {
+  display: block;
+}
+
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-top: 0.2rem;
+  padding-inline: 1rem;
+}
+
+#btn-reset {
+  grid-column: 3;
+  justify-self: start;
+  margin-left: 0.20rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#btn-reset:hover path {
+  stroke: #e02b2b;
+}
+
+#btn-reset:hover polygon {
+  fill: #e02b2b;
+}
+
+.button-play {
+  border: none;
+  border-radius: 50%;
+  background-color: #f35e31;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  grid-column: 2;
+}
+
+.button-play:hover {
+  background-color: #e64b4b;
+}
+
+.cycle {
+  display: block;
+  text-align: center;
+}
+
+.label-cycle {
+  font-size: 12px;
+  color: #977c3b;
+  margin-bottom: 0;
+}
+
+#cycle {
+  color: #FFCC59;
+}

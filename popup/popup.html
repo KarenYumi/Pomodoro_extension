@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Pomelo - timer pomodoro</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <img title="circle">
-    <p>timer</p>
-    <label>modo</label>
-    <button>play or stop</button>
-  </body>
+
+<head>
+  <title>Pomelo - timer pomodoro</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="timer-container">
+    <div class="pomelo-slice"></div>
+    <svg class="circle-container">
+      <circle id="circle-bg" cx="80" cy="80" r="65" />
+      <circle id="inner-circle" cx="80" cy="80" r="60" />
+      <circle id="circle-progress" cx="80" cy="80" r="65" />
+    </svg>
+    <div>
+      <p id="timer">00:00</p>
+      <label id="mode">modo</label>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="button-play">
+      <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#FAF0E8">
+        <path d="M9.1 4.3 Q7 3 7 5.5 L7 18.5 Q7 21 9.1 19.7 L19.9 13.3 Q22 12 19.9 10.7 Z" />
+      </svg>
+      <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#FAF0E8"
+        style="display:none">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+      </svg>
+    </button>
+    <button id="btn-reset">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f35e31">
+        <path d="M12 5 A7 7 0 1 0 19 12" stroke="#f35e31" stroke-width="2.2" fill="none" stroke-linecap="round" />
+        <polygon points="23,12 15,12 19,8 " fill="#f35e31" />
+      </svg>
+    </button>
+  </div>
+  <div class="cycle">
+    <p class="label-cycle">Completed Cycles</p>
+    <label id="cycle">0</label>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
 </html>
